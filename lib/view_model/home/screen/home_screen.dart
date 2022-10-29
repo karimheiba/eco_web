@@ -1,4 +1,5 @@
 import 'package:eco_web/view_model/home/widget/header.dart';
+import 'package:eco_web/view_model/home/widget/slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -21,6 +22,8 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Header(),
+
+            SliderBanner(),
            
           ],
         ),
