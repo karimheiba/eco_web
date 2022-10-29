@@ -7,7 +7,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -58,20 +58,40 @@ class Header extends StatelessWidget {
   Row menu() => Row(
     children: [
       MaterialButton(
-        color: Colors.grey,
+        color: Color.fromARGB(255, 205, 204, 204),
         height: 50,
         minWidth: 50,
         onPressed: (){},
-      child: Text("Menu"),),
+      child: Row(
+        children: [
+          Icon(Icons.menu),
+          SizedBox(width: 10,),
+          Text("Menu "),
+        ],
+      ),),
       SizedBox(
         width: 20,
       ),
 
-      SizedBox(
+      Container(
         width: 200,
         child: TextFormField(
+          
+
+
 
           decoration:InputDecoration(
+            prefixIcon: Icon(Icons.search),
+            hintText: "Search",
+            filled: true,
+
+            fillColor: Color.fromARGB(255, 205, 204, 204),
+            
+           border: OutlineInputBorder(
+
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.all(Radius.circular(35)),
+            )
              
           )),
         ),
