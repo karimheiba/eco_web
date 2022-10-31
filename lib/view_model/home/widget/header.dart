@@ -6,97 +6,86 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 40),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+        children: [
+          // menu &search section
+          menu(),
 
-                // menu &search section
-                menu(),
+          //logo section
+          logo(),
 
-                //logo section
-                 logo(),
-
-                 // account & add to cart section
-                  account(),
-              ],
-            ),
+          // account & add to cart section
+          account(),
+        ],
+      ),
     );
-    
   }
-               // account & add to cart section
+  // account & add to cart section
 
   Row account() => Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      MaterialButton(onPressed: (){},
-      child: Icon(Icons.heart_broken),
-      ),
-            MaterialButton(onPressed: (){},
-      child: Icon(Icons.person),
-      ),
-            MaterialButton(onPressed: (){},
-      child: Icon(Icons.shopping_cart),
-      ),
-    ],
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          MaterialButton(
+            onPressed: () {},
+            child: Icon(Icons.heart_broken),
+          ),
+          MaterialButton(
+            onPressed: () {},
+            child: Icon(Icons.person),
+          ),
+          MaterialButton(
+            onPressed: () {},
+            child: Icon(Icons.shopping_cart),
+          ),
+        ],
+      );
 
-  );
-
-                //logo section
-
+  //logo section
 
   Widget logo() => Container(
-    height: 50,
-    width: 50,
-    color: Colors.amber,
-
-  );
+        height: 50,
+        width: 50,
+        color: Colors.amber,
+      );
 
   // menu &search section
 
   Row menu() => Row(
-    children: [
-      MaterialButton(
-        color: Color.fromARGB(255, 205, 204, 204),
-        height: 50,
-        minWidth: 50,
-        onPressed: (){},
-      child: Row(
         children: [
-          Icon(Icons.menu),
-          SizedBox(width: 10,),
-          Text("Menu "),
+          MaterialButton(
+            color: Color.fromARGB(255, 205, 204, 204),
+            height: 50,
+            minWidth: 50,
+            onPressed: () {},
+            child: Row(
+              children: [
+                Icon(Icons.menu),
+                SizedBox(
+                  width: 10,
+                ),
+                Text("Menu "),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          Container(
+            width: 200,
+            child: TextFormField(
+                decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Search",
+                    filled: true,
+                    fillColor: Color.fromARGB(255, 205, 204, 204),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.all(Radius.circular(35)),
+                    ))),
+          ),
         ],
-      ),),
-      SizedBox(
-        width: 20,
-      ),
-
-      Container(
-        width: 200,
-        child: TextFormField(
-          
-
-
-
-          decoration:InputDecoration(
-            prefixIcon: Icon(Icons.search),
-            hintText: "Search",
-            filled: true,
-
-            fillColor: Color.fromARGB(255, 205, 204, 204),
-            
-           border: OutlineInputBorder(
-
-              borderSide: BorderSide.none,
-              borderRadius: BorderRadius.all(Radius.circular(35)),
-            )
-             
-          )),
-        ),
-        
-
-    ],
-  );
+      );
 }
