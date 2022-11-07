@@ -13,11 +13,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
+      builder: (context, child) {
+        return Theme(
+          data: theme(context),
+          child: HomeScreen(),
+        );
+      },
       debugShowCheckedModeBanner: false,
       title: 'Flutter E-commerce Web',
-      theme: theme,
-      themeMode: ThemeMode.system,
       home: HomeScreen(),
     );
   }

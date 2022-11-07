@@ -7,8 +7,9 @@ class MySize {
   gitSize(BuildContext context, double screenSize) {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
+    double customSize = width <= 500 ? 500 : 1440;
 
-    double mediaSize = 1440 / screenSize;
+    double mediaSize = customSize / screenSize;
 
     double mySize = width / mediaSize;
 
