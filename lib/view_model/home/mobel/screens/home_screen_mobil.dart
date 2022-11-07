@@ -1,18 +1,17 @@
+import 'package:eco_web/view_model/home/mobel/widgets/custom_header_mobil.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/size.dart';
-import '../widgets/custom_foter.dart';
-import '../widgets/custom_gridView.dart';
-import '../widgets/custom_header_web.dart';
 
-class HomeScreenWeb extends StatelessWidget {
-  const HomeScreenWeb({super.key});
+import '../../../../core/size.dart';
+import '../../web/widgets/custom_foter.dart';
+import '../widgets/custom_gridView_mobil.dart';
+
+class HomeScreenMobil extends StatelessWidget {
+  const HomeScreenMobil({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const CustomHeaderWeb(),
-      ),
+      appBar: AppBar(toolbarHeight: 50, title: CustomHeaderMobil()),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -23,22 +22,23 @@ class HomeScreenWeb extends StatelessWidget {
             ),
             Image.asset(
               "assets/images/logoEehab.png",
-              width: MySize.customSize.gitSize(context, 520),
+              width: MySize.customSize.gitSize(context, 275),
             ),
             const SizedBox(
               width: double.infinity,
             ),
             Image.asset(
               "assets/images/Foto.png",
-              width: MySize.customSize.gitSize(context, 1240),
+              fit: BoxFit.cover,
+              width: double.infinity,
             ),
-            const CustomGridView(
+            const CustomGridViewMobil(
               titel: "SALE",
             ),
-            const CustomGridView(
+            const CustomGridViewMobil(
               titel: "HOT",
             ),
-            const CustomGridView(
+            const CustomGridViewMobil(
               titel: "NOW",
             ),
             CustomFoter()

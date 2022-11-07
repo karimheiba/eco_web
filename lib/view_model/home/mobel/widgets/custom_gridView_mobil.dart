@@ -1,12 +1,13 @@
-import 'package:eco_web/view_model/home/web/widgets/custom_card.dart';
+import 'package:eco_web/core/size.dart';
+import 'package:eco_web/view_model/home/mobel/widgets/custom_card_mobil.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../core/color/colors.dart';
-import '../../../../core/size.dart';
 
-class CustomGridView extends StatelessWidget {
-  const CustomGridView({super.key, required this.titel});
+class CustomGridViewMobil extends StatelessWidget {
+  const CustomGridViewMobil({super.key, required this.titel});
+
   final String titel;
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,15 +24,15 @@ class CustomGridView extends StatelessWidget {
         ),
         GridView.count(
             shrinkWrap: true,
-            crossAxisCount: 4,
+            crossAxisCount: 2,
             mainAxisSpacing: MySize.customSize.gitSize(context, 5),
             crossAxisSpacing: MySize.customSize.gitSize(context, 5),
             childAspectRatio: MySize.customSize.gitSize(context, 1) /
-                MySize.customSize.gitSize(context, 1.1),
+                MySize.customSize.gitSize(context, 1),
             children: List.generate(
-              7,
+              6,
               (index) {
-                if (index > 5) {
+                if (index > 4) {
                   return Container(
                     alignment: AlignmentDirectional.center,
                     child: FittedBox(
@@ -44,7 +45,7 @@ class CustomGridView extends StatelessWidget {
                     ),
                   );
                 } else {
-                  return const CustomCard();
+                  return const CustomCardMobil();
                 }
               },
             )),

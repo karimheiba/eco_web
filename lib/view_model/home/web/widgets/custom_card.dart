@@ -23,14 +23,14 @@ class CustomCard extends StatelessWidget {
               "Jeans CLR Ruby",
               style: Theme.of(context).textTheme.subtitle1!.copyWith(
                   color: Gray,
-                  fontSize: MySize.customSize.gitSize(context, 18)),
+                 ),
             ),
           ),
           Text(
             "€140",
             style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 color: Secondary,
-                fontSize: MySize.customSize.gitSize(context, 25)),
+                ),
           ),
         ],
       ),

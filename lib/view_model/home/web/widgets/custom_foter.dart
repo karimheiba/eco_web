@@ -16,36 +16,32 @@ class CustomFoter extends StatelessWidget {
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text(
-                "",
-                style: TextStyle(color: Gray2),
-              ),
-              Text(
-                "COLLECTIONS",
-                style: TextStyle(color: Gray2),
-              ),
-              Text(
-                "CUSTOMIZER",
-                style: TextStyle(color: Gray2),
-              ),
-              Text(
-                "SALE",
-                style: TextStyle(color: Gray2),
-              ),
+            children: [
+              Text("COLLECTIONS",
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: Gray2,
+                      )),
+              Text("CUSTOMIZER",
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: Gray2,
+                      )),
+              Text("SALE",
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: Gray2,
+                      )),
             ],
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text(
-                "Telegram",
-                style: TextStyle(color: Gray2),
-              ),
-              Text(
-                "Instagram",
-                style: TextStyle(color: Gray2),
-              ),
+            children: [
+              Text("Telegram",
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: Gray2,
+                      )),
+              Text("Instagram",
+                  style: Theme.of(context).textTheme.headline1!.copyWith(
+                        color: Gray2,
+                      )),
             ],
           ),
           Image.asset("assets/images/logo.png",
